@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+input, button {
+    font-size: 14px;
+}
+
+.x_color { color: #3e87d4; }
+.o_color { color: #3bbdd6; }
+.x_bg { background-color: #3e87d4; color: white; }
+.o_bg { background-color: #3bbdd6; color: white; }
+
+.title {
+    padding: 20px;
+    text-align: center;
+}
+
+.title h1 {
+    color: #496680;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+.title.info h2 {
+    color: gray;
+}
+
+.startContainer {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    width: 50%;
+}
+
+.startContainer input {
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 3px;
+    border: 1px solid gray;
+    outline: none;
+}
+
+.startContainer button {
+    background-color: #496680;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    padding: 0 30px;
+}
+
+.startContainer button:hover {
+    background-color: rgba(0, 0, 0, .5)
+}
+
+.inputWrapper {
+    position: relative;
+}
+
+.inputWrapper input {
+    color: gray;
+    padding-left: 30px;
+}
+
+.inputWrapper .inputIcon {
+    color: rgba(0, 0, 0, .4);
+    left: 20px;
+    position: absolute;
+    top: calc(50% - 0.68em);
+}
+
+.board {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    height: 400px;
+    margin: 50px auto;
+    width: 400px;
+}
+
+.square {
+    font-weight: bold;
+    font-size: 60px;
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(255, 255, 255, .2);
+    border: solid rgba(0, 0, 0, .2);
+    border-width: 0 2px 2px 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.squeare:active {
+    border-style: none;
+}
+
+.square:focus {
+    outline: none;
+}
+
+.square:nth-child(3n) {
+    border-right: none;
+}
+
+.square:nth-child(n+7) {
+    border-bottom: none;
+}
+
+.square .o {
+    width: 50px;
+    margin: auto;
+    height: 50px;
+    border: 15px solid #3bbdd6;
+    border-radius: 50%;
+}
+
+.square .x {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.square .x:before, .square .x:after {
+    background-color: #3e87d4;
+    border-radius: 3px;
+    content: "";
+    display: block;
+    height: 94px;
+    left: 44%;
+    position: absolute;
+    top: 14%;
+    width: 15px;
+}
+
+.square .x:after {
+    transform: rotate(45deg);
+}
+
+.square .x:before {
+    transform: rotate(-45deg);
+}
+
+.actions {
+    width: 400px;
+    padding: 20px;
+    margin: auto;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+
+.actions .restartIcon {
+    color: #496680;
+    cursor: pointer;
+}
+
+.actions .player {
+    border-radius: 3px;
+    border: none;
+    padding: 10px 30px;
+}
